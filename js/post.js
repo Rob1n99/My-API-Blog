@@ -12,6 +12,8 @@ async function fetchPostById() {
         console.log(response)
         let post = await response.json();
 
+        let postDate = new Date(post.date);
+
 
 
 
@@ -21,7 +23,7 @@ async function fetchPostById() {
             <p><strong>${post.author}</strong></p>
             <p>${post.content}</p>
             <p>${post.tags}</p>
-            <p class="date">- ${post.date}</p>
+            <p  <span class="date">- ${postDate.getFullYear()}-${postDate.getMonth() + 1}-${postDate.getDate()} ${postDate.toLocaleTimeString()}</span></p>
         `;
 
         document.getElementById('post-detail').innerHTML = postsListHTML;
