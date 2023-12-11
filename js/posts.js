@@ -22,7 +22,7 @@ async function fetchAllPosts() {
                         ${post.tags} <br>
                         <span class="date">- ${postDate.getFullYear()}-${postDate.getMonth() + 1}-${postDate.getDate()} ${postDate.toLocaleTimeString()}</span>
                     </p>
-                    <a class="admin" href="admin/index.html">Admin</a>
+                    <a id="update" href="admin/update-post.html">Update</a>
                 </li>
             `;
         }
